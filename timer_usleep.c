@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<time.h>
 #include <sys/time.h>
 #include <sys/resource.h>
@@ -29,7 +30,6 @@ int main(int argc, char** argv)
 		stop=tv.tv_sec + tv.tv_usec*0.000001;
 		printf("Time is %ld : %ld..slept for %lf ms\n",tv.tv_sec,tv.tv_usec,(stop-start)*1000);
 	}
-	printf("Total time taken : actual %lf theory(excl. runtime): %d, ms
-	\n",(stopinit)*1000,num_iter*delay);
+	printf("Total time taken : actual %lf theory(excl. runtime): %d, ms\n",(stop-init)*1000,num_iter*delay);
 	return 0;
 }

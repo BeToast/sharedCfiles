@@ -1,0 +1,5 @@
+posix_getres
+timer_mem_use
+timer_memlock
+timer_usleep
+posx_nanosleep

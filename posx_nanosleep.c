@@ -2,6 +2,7 @@
 #include<time.h>
 #include <sys/time.h>
 #include <sys/resource.h>
+#include <stdlib.h>
 // nanosleep to delay process between successive calls to print out time uses timespec structure
 int main(int argc, char** argv){
 	struct timespec curr_time1,curr_time2, sleeptime;
@@ -18,11 +19,11 @@ int main(int argc, char** argv){
 	// set up sleeptime struct
 	sleeptime.tv_sec=0;
 	while(delay>=1000){ // overflow if >=1sec
-	sleeptime.tv_sec++;
-	delay=delay-1000;
+    sleeptime.tv_sec++;
+    delay=delay-1000;
 	}
 	sleeptime.tv_nsec=delay*1000000;
-	printf("Sleeptime struct is %d sec: %d nsec\n",sleeptime.tv_sec,sleeptime.tv_nsec);
+	printf("Sleeptime struct is %ld sec: %ld nsec\n",sleeptime.tv_sec,sleeptime.tv_nsec);
 	clock_gettime(CLOCK_REALTIME, &curr_time1);
 	init=curr_time1.tv_sec + curr_time1.tv_nsec*0.000000001;
 	for(i=0;i<num_iter;++i)
@@ -35,8 +36,7 @@ int main(int argc, char** argv){
 		clock_gettime(CLOCK_REALTIME, &curr_time2);
 		now1=curr_time1.tv_sec + curr_time1.tv_nsec*0.000000001;
 		now2=curr_time2.tv_sec + curr_time2.tv_nsec*0.000000001;
-		printf("Time is %ld : %ld..slept for %lf
-		nsec\n",curr_time2.tv_sec,curr_time2.tv_nsec,(now2-now1)*1000000000);
+		printf("Time is %ld : %ld..slept for %lfnsec\n",curr_time2.tv_sec,curr_time2.tv_nsec,(now2-now1)*1000000000);
 	}
 	printf("Total time taken : actual %lf msec theory(excl. runtime): %d msec\n",(now2-init)*1000,num_iter*atoi(argv[1]));
 	return 0;

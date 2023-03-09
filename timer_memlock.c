@@ -35,7 +35,7 @@ int main(int argc, char** argv){
 	// generator to access array randomly .. greater likelihood of paging in unlocked version
 	for(j=0;j<iterations;++j)
 	{
-		gettimeofday( &tv,&tz);
+		gettimeofday(&tv,&tz);
 		start=tv.tv_sec + tv.tv_usec*0.000001;
 		// random seed
 		srand(time(NULL));
