@@ -5,6 +5,7 @@
 #include <sys/resource.h>
 #include<unistd.h>
 #include<sys/mman.h>
+//args are arrasize and iterations. each iteration has 10 seconds sleep.
 int main(int argc, char** argv){
 	struct timeval tv;
 	struct timezone tz;
@@ -23,7 +24,7 @@ int main(int argc, char** argv){
 	// progname=argv[0];
 	array_size=atoi(argv[1]);
 	iterations=atoi(argv[2]);
-	// Record start
+  // Record start
 	gettimeofday( &tv,&tz);
 	init=tv.tv_sec + tv.tv_usec*0.000001;
 	// create large float arrays
