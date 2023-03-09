@@ -41,7 +41,7 @@ int main(int argc, char** argv){
 		}
 		gettimeofday( &tv,&tz);
 		stop=tv.tv_sec + tv.tv_usec*0.000001;
-		printf("Run time for pass %d is %lf ms\n",j+1, (stop-start)*1000);
+		printf("time_pass_%d,%lf\n",j+1, (stop-start)*1000);
 		// sleep for 10 sec
 		sleep(10);
 	}
@@ -49,6 +49,6 @@ int main(int argc, char** argv){
 	free(arrayPtr);
 	gettimeofday( &tv,&tz);
 	stop=tv.tv_sec + tv.tv_usec*0.000001;
-	printf("Total Run time is %lf ms\n", (stop-init)*1000);
+	printf("total_time,%lf\n", (stop-init)*1000);
 	return 0;
 }
