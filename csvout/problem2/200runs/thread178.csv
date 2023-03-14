@@ -1,13 +1,14 @@
-time_passtime_pass_1,10.035038
-time_pass_2,9.358168
-time_pass_3,9.717941
-time_pass_4,19.826889
-time_pass_5,9.593964
-time_pass_6,9.378910
-time_pass_7,9.523869
-time_pass_8,9.521961
-time_pass_9,9.438992
-time_pass_10,9.541035
-time_pass_11,9.402990
-time_pass_12,21.816969
-total_time,120413.970947
+time_pass, time
+time_pass_1,496.660948
+time_pass_2,1644.539118
+time_pass_3,962.994099
+time_pass_4,361.557961
+time_pass_5,1043.774128
+time_pass_6,9.367943
+time_pass_7,9.889841
+time_pass_8,10.207891
+time_pass_9,11.937857
+time_pass_10,57.626009
+time_pass_11,9.809971
+time_pass_12,9.635925
+total_time,125305.776119
