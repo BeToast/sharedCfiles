@@ -13,7 +13,7 @@ int main(int argc, char** argv){
 		fprintf(stderr, "Usage: %s <Size of array><no of iterations>\n", argv[0]);
 		exit(1);
 	}
-  printf("time_pass","time");
+  printf("time_pass, time\n");
 	// progname=argv[0];
 	array_size=atoi(argv[1]);
 	iterations=atoi(argv[2]);
