@@ -1,5 +1,5 @@
 #!/bin/bash
-RUNS=500
+RUNS=600
 mkdir csvout
 mkdir csvout/problem2
 mkdir csvout/problem2/${RUNS}runs
